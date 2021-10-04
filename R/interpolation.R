@@ -4,6 +4,7 @@
 #' @param precip_df Must contain precip, x, y columns (elev optional)
 #' @param out_xy Coordinates (x, y) at which to interpolate (elev optional)
 #' @param elev_gradient Linear elevation gradient (see details)
+#' @export
 #' @details
 #' For elevation gradient, \code{elev_gradient} should be specified in units
 #' of precipitation over elevation (i.e., if precipitation is in mm and
