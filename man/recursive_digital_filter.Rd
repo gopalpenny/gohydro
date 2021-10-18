@@ -7,9 +7,9 @@
 recursive_digital_filter(x, alpha)
 }
 \arguments{
-\item{alpha}{Filter parameters (0.9 - 0.95)}
+\item{x}{Baseflow timeseries}
 
-\item{y}{Baseflow timeseries}
+\item{alpha}{Filter parameter (see details)}
 }
 \description{
 Recursive digital filter
@@ -22,9 +22,10 @@ be considered quickflow which is calculated as:
 
 \code{f[k] = alpha * f[k-1] + (1+alpha)/2 * (y[k] - y[k-1])}
 
-The filter is run forwards, then backwards, then forwards again. Nathan and McMahon
-found that a value of 0.9 closely matched baseflow separation via manual
-techniques.
+The filter is run forwards, then backwards, then forwards again, and each time baseflow
+is calculated as \code{b[k] = y[k] - f[k]}. Nathan and McMahon
+found that a values of 0.9-0.95 closely matched baseflow separation via manual
+separation techniques, with 0.9 the closest match in their study.
 
 Nathan, R. J., & McMahon, T. A. (1990). Evaluation of automated techniques for base flow
 and recession analyses. Water resources research, 26(7), 1465-1473.
