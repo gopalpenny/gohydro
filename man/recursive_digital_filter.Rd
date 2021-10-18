@@ -12,7 +12,7 @@ recursive_digital_filter(x, alpha)
 \item{alpha}{Filter parameter (see details)}
 }
 \description{
-Recursive digital filter
+Recursive digital filter for baseflow separation
 }
 \details{
 This functions executes the recusive digital filter for baseflow separation as

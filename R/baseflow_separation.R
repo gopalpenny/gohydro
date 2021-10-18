@@ -17,6 +17,7 @@ digital_filter <- function(y,alpha) {
 
 #' Recursive digital filter
 #'
+#' Recursive digital filter for baseflow separation
 #' @param x Baseflow timeseries
 #' @param alpha Filter parameter (see details)
 #' @export
